@@ -1,0 +1,14 @@
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Character: {{ character.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <img [src]="character.image" />
+
+      <pre>
+         {{ character | json }}
+      </pre>
+    </mat-card-content>
+  </mat-card>
+</div>

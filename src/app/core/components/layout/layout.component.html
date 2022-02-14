@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Aplazo </span>
+    <span class="mat-spacer"></span>
+    <button mat-button [routerLink]="'/characters'" routerLinkActive="mat-accent">Characters</button>
+    <button mat-button [routerLink]="'/locations'" routerLinkActive="mat-accent">Locations</button>
+    <button mat-button [routerLink]="'/episodes'" routerLinkActive="mat-accent">Episodes</button>
+    <span class="mat-spacer"></span>
+    <mat-form-field floatLabel="never">
+      <input
+        matInput
+        #searchInput="matInput"
+        type="text"
+        placeholder="Search"
+        autocomplete="off"
+        [(ngModel)]="term"
+        (keyup)="searchTermChange()"
+      />
+      <mat-icon matSuffix *ngIf="term ==''">search</mat-icon>
+      <mat-icon matSuffix *ngIf="term !=''"  (click)="clear()">close</mat-icon>
+    </mat-form-field>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav-content>
+
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

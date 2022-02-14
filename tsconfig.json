@@ -1,0 +1,43 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "paths": {
+      "@material":    ["src/app/core/shared/material/material.module.ts"],
+      "@layout":      ["src/app/core/components/layout/layout.component.ts"],
+      "@list-data":   ["src/app/components/list-data/list-data/list-data.component.ts"],
+      "@cors":        ["src/app/core/cors/cors.service.ts"],
+      "@shared":      ["src/app/core/shared/shared/shared.module.ts"],
+      "@interfaces":  ["src/app/core/interfaces/index.ts"],
+      "@storeModule": ["src/app/core/store/storage/storage.module.ts"],
+
+
+    },
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2017",
+    "module": "es2020",
+    "lib": [
+      "es2020",
+      "dom"
+    ]
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}
